@@ -1,0 +1,18 @@
+<div class="login-panel" ng-controller="loginController">
+    <div class="login-panel-head">
+        <h1><blue>Connect to your account</blue></h1>
+    </div>
+    <div class="login-panel-content">
+        <div>
+            <blue><i class="fa fa-users fa"></i></blue>
+            <input ng-model="username" type="text" placeholder="Username">
+        </div>
+        <div>
+            <blue><i class="fa fa-lock fa-lg"></i></blue>
+            <input ng-model="password" type="password" placeholder="Password">
+        </div>
+    </div>
+    <div class="login-panel-footer">
+        <a class="button" ng-click="login()">LogIn</a>
+    </div>
+</div>

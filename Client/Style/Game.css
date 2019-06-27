@@ -1,0 +1,35 @@
+.game-container{
+    margin-top: 50px;
+    text-align: center;
+    text-transform: none;
+}
+.curent-player-container{
+    display: inline-block;
+    float: left;
+    height: auto;
+    width: 25%;
+}
+
+.board{
+    display: inline-block;
+    float: left;
+    height: 60%;
+    width: 50%; 
+}
+
+.opponent-container{
+    display: inline-block;
+    float: left;
+    height: auto;
+    width: 25%;
+}
+.box{
+    display: inline-block;
+    border:10px solid #000000;
+    border-color: aqua;
+    float: left;  
+    width: 29%;
+    height: 20%;
+    text-align: center;
+    font-size:80px;
+}

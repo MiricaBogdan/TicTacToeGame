@@ -1,0 +1,16 @@
+.start{
+    padding-top:10px;
+    text-transform: none;
+    text-align: center;
+    font-size: 30px;
+}
+.startContainer{
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+#logOutButton{
+    background-color: darkred;
+}
+

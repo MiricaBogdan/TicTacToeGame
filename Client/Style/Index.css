@@ -1,0 +1,98 @@
+@font-face {
+    font-family: BerlinSansFBDemiBold;
+    src: url(../Fonts/BerlinSansFBDemiBold.ttf);
+}
+
+body{
+    margin:0px;
+    width: 100%;
+    display: block;
+    overflow: auto;
+    height: auto;
+    padding: 0px;
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: #1e1b1b;
+    color: white;
+}
+
+div{
+    padding: 0px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title-container{
+    width: 100%;
+    overflow: auto;
+    display: block;
+    text-align: center;
+    padding: 50px 0px;
+    float: left;
+    display: block;
+}
+
+.title-container h1{
+    margin: 0px; 
+}
+
+.content-container{
+    width: 100%;
+    background-color: white;
+    color: #1e1b1b;
+    float: left;
+    display: block;
+    padding-bottom: 60px;
+}
+
+.footer{
+    width: 100%;
+    display: block;
+    float: left;
+    height: 100px;
+    margin-top: 50px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerPanel{
+    text-align: center;
+    flex: 33%;
+    max-width: 33%;
+}
+
+@media screen and (max-width: 1100px) {
+    .footerPanel{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.footerPanel h1{
+    font-size: 30px;
+    font-family: BerlinSansFBDemiBold;
+}
+
+.button{
+    cursor: pointer;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: #44629a;
+    font-size: 20px;
+    display: inline-block;
+    box-shadow: 0 4px #463f3f;
+}
+
+.button:active{
+    box-shadow: 0 2px #463f3f;
+    transform: translateY(2px);
+}
+
+blue{
+    color: #6e6ef8;
+}

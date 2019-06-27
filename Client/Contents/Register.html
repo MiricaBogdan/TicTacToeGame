@@ -1,0 +1,22 @@
+<div class="register-panel" ng-controller="registerController">
+    <div class="register-panel-head" >
+        <h1><blue>Register</blue></h1>
+    </div>
+    <div class="register-panel-content">
+        <div>
+            <blue><i class="fa fa-user fa"></i></blue>
+            <input ng-model="name" type="text" placeholder="Enter your Name">
+        </div>
+        <div>
+            <blue><i class="fa fa-users fa"></i></blue>
+            <input ng-model="username" type="text" placeholder="Enter your Username">
+        </div>
+        <div>
+            <blue><i class="fa fa-lock fa-lg"></i></blue>
+            <input ng-model="password" type="password" placeholder="Enter your Password">
+        </div>
+    </div>
+    <div class="register-panel-footer" >
+        <a class="button" ng-click="register()" >Sign up</a>
+    </div>
+</div>

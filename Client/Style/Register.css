@@ -1,0 +1,47 @@
+.register-panel{
+    overflow: hidden;
+    display: block;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    margin: 0px auto;
+    top: 30px;
+    box-shadow: 0px 4px 20px rgba(25, 23, 23, 0.56);
+    border: 1px solid rgba(33, 27, 27, 0.48);
+}
+
+.register-panel-head{
+    text-align: center;
+    display: block;
+}
+
+.register-panel-content{
+    text-transform: none;
+    text-align: center;
+    display: block;
+}
+.register-panel-content div{
+    display: block;
+    width: 100%;
+    height: 70px;
+    overflow: auto;
+}
+
+.register-panel-content input{
+    padding: 10px;
+    margin: 10px;
+}
+
+.register-panel-content i{
+    width: 25px;
+}
+
+.register-panel-footer{
+    text-align: center;
+    display: block;
+    padding: 20px;
+}
+
+.register-panel-footer a{
+    cursor: pointer;
+}

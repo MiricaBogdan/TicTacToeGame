@@ -1,0 +1,13 @@
+<div class="start" ng-controller="startController" ng-init="checkLogin()">
+    <p> Welcome, {{name}} </p>
+    
+    <div class="startContainer">
+        <a class="button" ng-click="startQueue()">Search for game</a>
+    </div>
+    
+    <div class="startContainer">
+        <a class="button" id="logOutButton"ng-click="logOut()">LogOut</a>
+    </div>
+    
+    <img-panel></img-panel>
+</div>
