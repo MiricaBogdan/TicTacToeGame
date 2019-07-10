@@ -25,14 +25,17 @@ app.config(function($routeProvider) {
 app.controller('registerController', function($scope,$location,$http) {
 
     $scope.register=function(){
-        if($scope.name==null){
+        if(($scope.name==null)||($scope.name=="")){
             alert("Please enter your name");
         }
-        else if($scope.username==null){
+        else if(($scope.username==null)||($scope.username=="")){
             alert("Please enter your username");
         }
-        else if($scope.password==null){
+        else if(($scope.password==null)||($scope.password=="")){
             alert("Please enter your password");
+        }
+        else if($scope.password.length<4){
+             alert("Password too short \nYour password must have at least 4 charaters!");
         }
         else{
             var registerRequest = {
@@ -314,6 +317,7 @@ app.controller('gameController', function($scope,$location,$http,localStorageSer
             }
             else if(gameDto.playerWon.name==$scope.name){
                 alert("You won!");
+                localStorageService.set('gameswon',$scope.gameswon+1);
                 $location.path('/start');
                 $scope.$apply();
             }
@@ -328,9 +332,9 @@ app.controller('gameController', function($scope,$location,$http,localStorageSer
 });
 
 app.directive("imgPanel", function() {
-  return {
-    templateUrl: './Directives/imgPanel.html'
-  };
+    return {
+        templateUrl: './Directives/imgPanel.html'
+    };
 });
 
 app.service('checkLoginService', function(localStorageService,$location) {
@@ -344,4 +348,3 @@ app.service('checkLoginService', function(localStorageService,$location) {
         }
     }
 });
-
