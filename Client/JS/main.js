@@ -1,3 +1,4 @@
+var ip='http://192.168.1.103' ;  //This is the IP of your computer
 var app = angular.module("TicTacToeApp",['ngRoute','LocalStorageModule','ngStomp']);
 
 app.config(function($routeProvider) {
@@ -40,7 +41,7 @@ app.controller('registerController', function($scope,$location,$http) {
         else{
             var registerRequest = {
                 method: 'POST',
-                url: 'http://192.168.1.103:8080/user/add',
+                url: ip +':8080/user/add',
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -77,7 +78,7 @@ app.controller('loginController', function($scope,$location,$http,localStorageSe
         else{
             var loginRequest = {
                 method: 'POST',
-                url: 'http://192.168.1.103:8080/user/login',
+                url: ip +':8080/user/login',
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -146,7 +147,7 @@ app.controller('searchController', function($scope,$location,$http,localStorageS
 
 
     function connect() {
-        var socket = new SockJS('http://192.168.1.103:8080/gs-guide-websocket');
+        var socket = new SockJS(ip +':8080/gs-guide-websocket');
         stompClient = Stomp.over(socket);
         stompClient.connect({}, function (frame) {
             console.log('Connected: ' + frame);
@@ -158,7 +159,7 @@ app.controller('searchController', function($scope,$location,$http,localStorageS
     */
 
     $stomp
-        .connect('http://192.168.1.103:8080/gs-guide-websocket', {})
+        .connect(ip +':8080/gs-guide-websocket', {})
         .then(function (frame) {
         console.log("Connected " +frame);
         subscription= $stomp.subscribe('/topic/queue/', function (payload, headers, res) {
@@ -226,7 +227,7 @@ app.controller('gameController', function($scope,$location,$http,localStorageSer
     }
 
     $stomp
-        .connect('http://192.168.1.103:8080/gs-guide-websocket', {})
+        .connect(ip +':8080/gs-guide-websocket', {})
         .then(function (frame) {
         console.log("Connected " +frame);
         $scope.showPlayerTurn();
