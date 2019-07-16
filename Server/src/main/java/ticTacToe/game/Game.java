@@ -16,7 +16,7 @@ public class Game {
 	
 	int i;
 	int j;
-
+	
 	public int[][] StartMatrix() {
 		int[][] matrix = new int[3][3];
 		for (i = 0; i < 3; i++)
